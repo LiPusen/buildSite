@@ -37,7 +37,7 @@ app.use(session.check(), session.init());
 app.use(express.static(path.join(__dirname, 'public')));
 
 /**
- * 转给 Roter 处理路由
+ * 转给 Router 处理路由
  */
 app.use(router);
 
