@@ -27,7 +27,7 @@ app.set('view engine', '.hbs');
  * 中间件
  */
 app.use(compression());
-app.use(favicon(__dirname + '/public/favicon.ico'));
+app.use(favicon(__dirname + '/public/logo/bit.ico'));
 app.use(logger.access());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
