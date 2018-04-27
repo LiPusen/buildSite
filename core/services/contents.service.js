@@ -408,12 +408,12 @@ exports.save = function (options, callback) {
           callback();
         });
       },
-      saveContent: ['checkAlias', function (callback) {
+      saveContent: ['checkAlias', function (d ,callback) {
         new contentsModel(data).save(function (err, content) {
           callback(err, content);
         });
       }],
-      updateMedia: ['saveContent', function (callback, results) {
+      updateMedia: ['saveContent', function (results, callback) {
         if (data.thumbnail) {
           data.media = data.media || [];
           data.media.push(data.thumbnail);

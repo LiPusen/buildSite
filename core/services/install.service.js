@@ -71,7 +71,7 @@ exports.install = function (options, callback) {
         if (hasInstall) {
           var err = {
             type: 'system',
-            error: '非法调用，NoderCMS 已经安装'
+            error: '非法调用，系统 已经安装'
           };
 
           return callback(err);
@@ -155,7 +155,7 @@ exports.install = function (options, callback) {
     }]
   }, function (err, results) {
     if (err) return callback(err);
-
+	console.log(results)
     var data = {
       user: results.writeUser
     };

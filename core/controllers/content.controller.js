@@ -39,16 +39,16 @@ module.exports = function (req, res, next) {
           callback(null, category);
         });
       },
-      localReadingTotal: ['category', function (callback, results) {
+      localReadingTotal: ['category', function (results, callback) {
         listsService.reading({ _id: results.category._id }, callback);
       }],
-      localReadingDay: ['category', function (callback, results) {
+      localReadingDay: ['category', function (results, callback) {
         listsService.reading({ _id: results.category._id, sort: '-reading.day' }, callback);
       }],
-      localReadingWeek: ['category', function (callback, results) {
+      localReadingWeek: ['category', function (results, callback) {
         listsService.reading({ _id: results.category._id, sort: '-reading.week' }, callback);
       }],
-      localReadingMonth: ['category', function (callback, results) {
+      localReadingMonth: ['category', function (results, callback) {
         listsService.reading({ _id: results.category._id, sort: '-reading.month' }, callback);
       }]
     }, function (err, results) {
