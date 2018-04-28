@@ -228,14 +228,6 @@ exports.install = function (req, res) {
       },
       isString: { errorMessage: 'theme 需为字符串' }
     },
-    // 导入示例数据，下一版本
-    //'case': {
-    //  notEmpty: {
-    //    options: [true],
-    //    errorMessage: 'case 不能为空'
-    //  },
-    //  isBoolean: { errorMessage: 'case 需为布尔值' }
-    //},
     'title': {
       notEmpty: {
         options: [true],
@@ -296,11 +288,6 @@ exports.install = function (req, res) {
     password: req.body.password
   };
 
-  // 导入示例数据，下一版本
-  //var caseData = {
-  //  case: req.body.case
-  //};
-
   async.auto({
     status: function (callback) {
       installService.status(function (err, hasInstall) {
@@ -309,7 +296,7 @@ exports.install = function (req, res) {
         if (hasInstall) {
           var err = {
             type: 'system',
-            error: 'NoderCMS 已经安装'
+            error: '建站系统已经安装'
           };
           return callback(err);
         }
@@ -322,8 +309,6 @@ exports.install = function (req, res) {
         databaseDate: databaseDate,
         siteInfoDate: siteInfodata,
         userDate: userDate
-        // 导入示例数据，下一版本
-        //caseDate: caseData
       }, function (err, install) {
         if (err) return callback(err);
 
@@ -339,8 +324,8 @@ exports.install = function (req, res) {
       return res.status(500).end();
     }
 
-    logger.system().info(__dirname, 'NoderCMS 成功安装');
+    logger.system().info(__dirname, '系统安装成功！');
 
-    res.status(204).end();
+    res.status(200).end();
   });
 };

@@ -79,7 +79,7 @@ exports.save = function (options, callback) {
         callback(err, oldPage);
       });
     },
-    pullMedia: ['updatePage', function (results, callback) {
+    pullMedia: ['updatePage', function (callback, results) {
       var pullMedia = _.difference(_.map(_.get(results, 'updatePage.mixed.pageMedia'), function (medium) {
         return medium.toString()
       }), newMedia);
@@ -91,7 +91,7 @@ exports.save = function (options, callback) {
         callback(err);
       });
     }],
-    addMedia: ['updatePage', function (results, callback) {
+    addMedia: ['updatePage', function (callback, results) {
       var addMedia = _.difference(newMedia, _.map(_.get(results, 'updatePage.mixed.pageMedia'), function (medium) {
         return medium.toString()
       }));

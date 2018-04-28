@@ -60,8 +60,6 @@ exports.install = function (options, callback) {
   var databaseDate = options.databaseDate;
   var siteInfoDate = options.siteInfoDate;
   var userDate = options.userDate;
-  // 导入示例数据，下一版本
-  //var caseDate = options.caseDate;
 
   async.auto({
     checkInstall: function (callback) {
@@ -71,7 +69,7 @@ exports.install = function (options, callback) {
         if (hasInstall) {
           var err = {
             type: 'system',
-            error: '非法调用，系统 已经安装'
+            error: '非法调用，NoderCMS 已经安装'
           };
 
           return callback(err);
@@ -155,7 +153,7 @@ exports.install = function (options, callback) {
     }]
   }, function (err, results) {
     if (err) return callback(err);
-	console.log(results)
+
     var data = {
       user: results.writeUser
     };
