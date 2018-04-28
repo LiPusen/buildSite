@@ -16,6 +16,7 @@ app.set('port', port);
 
 /**
  * 启动服务器
+ * %$async.waterfall函数是将所有的异步方法做成执行流，通过回调把参数向下一个异步方法传递,第二个参数是最后一个函数的回调方法
  */
 async.waterfall([
   // 检查安装锁
@@ -34,8 +35,6 @@ async.waterfall([
     async.series([
       // 连接数据库
       database.connect,
-      // 升级数据库
-      database.update,
       // 初始化主题
       function (callback) {
         themes.init(app, callback);
@@ -81,3 +80,10 @@ async.waterfall([
     logger.system().info('正在监听 ' + bind);
   });
 });
+
+/**
+ * %$  %$
+ * 1. 以bash命令行的方式对服务或者应用进行启动，并把它放在bin目录下，指定语法环境node，完全按照node的开发方式开发，推荐写法。
+ * 2. ①是否安装并设置了数据库相关配置，实际检查的是根目录下的install.lock文件是否存在；②根据检查结果选择将要执行程序；③启动服务，并处理服务启动过程中的可能阻碍。
+ *
+ */

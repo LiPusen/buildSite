@@ -60,8 +60,6 @@ exports.install = function (options, callback) {
   var databaseDate = options.databaseDate;
   var siteInfoDate = options.siteInfoDate;
   var userDate = options.userDate;
-  // 导入示例数据，下一版本
-  //var caseDate = options.caseDate;
 
   async.auto({
     checkInstall: function (callback) {
