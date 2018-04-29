@@ -138,7 +138,7 @@ exports.testDatabase = function (req, res) {
         if (hasInstall) {
           var err = {
             type: 'system',
-            error: '非法调用，NoderCMS 已经安装'
+            error: '非法调用，系统已经安装'
           };
           return callback(err);
         }

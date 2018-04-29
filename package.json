@@ -1,21 +1,13 @@
 {
-  "name": "nodercms",
+  "name": "mycms",
   "description": "CMS内容管理系统",
-  "version": "1.4.0",
-  "author": {
-    "name": "Welkin Wong",
-    "email": "welkin.wong@me.com"
-  },
-  "license": "AGPL-3.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/welkinwong/nodercms.git"
-  },
+  "version": "1.0.0",
+  "license": "MIT",
   "homepage": "https://www.nodercms.com",
   "keywords": [
-    "NoderCMS",
-    "node cms",
-    "CMS",
+    "mycms",
+    "liyq cms",
+    "liyq",
     "cms"
   ],
   "dependencies": {
