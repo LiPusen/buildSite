@@ -16,7 +16,7 @@ exports.access = function (req, res, next) {
       logger[err.type]().error(__filename, err);
       return res.status(500).end();
     }
-
+    
     if (hasInstall) {
       next();
     } else {
