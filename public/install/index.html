@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 设置360浏览器渲染模式,webkit 为极速内核，ie-comp 为 IE 兼容内核，ie-stand 为 IE 标准内核。 -->
+    <meta name="renderer" content="webkit">
+    <meta name="google" value="notranslate">
+    <!-- 禁止Chrome 浏览器中自动提示翻译 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- 禁止百度转码 -->
+    <meta http-equiv="pragma" content="no-cache" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="Cache-Control" content="no-transform " />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <title>rabbit建站系统</title>
+    <link rel="shortcut icon" href="/logo/bit.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/install/css/base.css"/>
+    <link rel="stylesheet" type="text/css" href="/install/css/buttons.css"/>
+    <link rel="stylesheet" type="text/css" href="/install/css/forms.css"/>
+    <link rel="stylesheet" type="text/css" href="/install/css/index.css"/>
+</head>
+<body>
+    <div class="g-box">
+        <h1>Rabbit建站系统安装程序</h1>
+        <form class="pure-form pure-form-aligned">
+        		<legend>数据库基础配置</legend>
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="host">数据库地址：</label>
+                    <input id="host" type="text" placeholder="数据库地址,如果和应用部署在同一台服务器上，则默认localhost" value="localhost">
+                </div>
+                <div class="pure-control-group">
+                    <label for="post">数据库端口号：</label>
+                    <input id="port" type="text" placeholder="数据库端口号，默认27017" value="27017">
+                </div>
+        			<div class="pure-control-group">
+                    <label for="db">数据库名：</label>
+                    <input id="db" type="text" placeholder="数据库名" value="mycms">
+                </div>
+                <div class="pure-control-group">
+                    <label for="user">数据库用户名：</label>
+                    <input id="user" type="text" placeholder="连接数据库的用户名" value="">
+                </div>
+                <div class="pure-control-group">
+                    <label for="pass">数据库密码：</label>
+                    <input id="pass" type="password" placeholder="连接数据库的密码">
+                </div>
+                <div class="pure-controls">
+                    <button type="button" id="test" class="pure-button pure-button-primary">连接测试</button>
+                </div>
+            </fieldset>
+        </form>
+        <form class="pure-form pure-form-aligned">
+        		<legend>站点初始化设置</legend>
+            <fieldset>
+                <div class="pure-control-group">
+                    <label for="title">网站标题：</label>
+                    <input id="title" type="text" placeholder="请输入网站标题" value="">
+                </div>
+                <div class="pure-control-group">
+                    <label for="theme">主题：</label>
+                    <select id="theme">
+			            <option value="default">default</option>
+			        </select>
+                </div>
+        			<div class="pure-control-group">
+                    <label for="email">Email：</label>
+                    <input id="email" type="text" placeholder="请输入邮箱地址" value="">
+                </div>
+                <div class="pure-control-group">
+                    <label for="nickname">请输入昵称：</label>
+                    <input id="nickname" type="text" placeholder="请输入昵称" value="">
+                </div>
+                <div class="pure-control-group">
+                    <label for="paw">管理员密码：</label>
+                    <input id="paw" type="password" placeholder="请设置管理登陆密码">
+                </div>
+                <div class="pure-control-group">
+                    <label for="pw">确认密码：</label>
+                    <input id="pw" type="password" placeholder="请再次输入密码">
+                </div>
+                <div class="pure-controls">
+                    <button type="button" id="install" class="pure-button pure-button-primary">开始安装系统</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+    <script src="/install/js/jq.js" type="text/javascript" charset="utf-8"></script>
+    <script src="/install/js/index.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>
