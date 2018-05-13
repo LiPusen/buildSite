@@ -1,0 +1,8 @@
+/node_modules
+/logs
+.project
+.gitignore
+.README.md
+LICENSE
+/src
+.vs

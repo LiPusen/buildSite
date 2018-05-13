@@ -53,7 +53,7 @@
   "mongodb": ">=3.0.6",
   "main": "bin/www",
   "scripts": {
-    "start": "pm2 start ./bin/www --name hoop --watch ",
-    "dev": "node ./bin/www"
+    "dev": "pm2 start ./bin/www --name hoop --watch ",
+    "start": "node ./bin/www"
   }
 }
