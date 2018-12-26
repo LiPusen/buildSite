@@ -6,7 +6,7 @@ module.exports = {
 		access: {
 			type: 'dateFile',
 			filename: 'logs/access/access',
-			pattern: '-dd--hh.log',
+			pattern: '-dd.log',
 			alwaysIncludePattern: true
 		},
 		system: {
